@@ -15,7 +15,8 @@ ENV OTP_GRAPHS /var/otp/graphs
 
 RUN \
   mkdir -p /var/otp/graphs && \
-  wget -P /var/otp/graphs http://data.trilliumtransit.com/gtfs/path-nj-us/path-nj-us.zip && \
+  wget -O /var/otp/graphs/nj-bus.zip http://transitfeeds.com/p/nj-transit/409/latest/download && \
+  wget -O /var/otp/graphs/nj-rail.zip http://transitfeeds.com/p/nj-transit/408/latest/download && \
   wget -P /var/otp/graphs https://s3.amazonaws.com/metro-extracts.mapzen.com/new-york_new-york.osm.pbf && \
   java -Xmx8G -jar /var/otp/otp.jar --build /var/otp/graphs
 
