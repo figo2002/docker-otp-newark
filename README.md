@@ -18,6 +18,10 @@ Open a separate terminal window and run `docker-machine ls` to get the IP addres
 
 Now you should be able to access it in your browser at that IP address
 
+In order to add a pointset for analysis, run `docker-machine ssh newark-otp` and
+from inside the VM, run `docker ps -a`, get the container id, and run
+`docker cp FILENAME CONTAINER-ID:/var/otp/pointsets`
+
 ## How to setup (Linux)
 Similar to the OSX instructions, but without the extra docker-machine steps at the beginning.
 ```
