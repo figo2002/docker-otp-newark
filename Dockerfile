@@ -14,7 +14,6 @@ ENV OTP_BASE /var/otp
 ENV OTP_GRAPHS /var/otp/graphs
 
 RUN \
-  mkdir -p /var/otp/pointsets && \
   mkdir -p /var/otp/graphs && \
   wget -O /var/otp/graphs/nj-bus.zip http://transitfeeds.com/p/nj-transit/409/latest/download && \
   wget -O /var/otp/graphs/nj-rail.zip http://transitfeeds.com/p/nj-transit/408/latest/download && \
