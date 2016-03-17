@@ -16,7 +16,10 @@ You can also run with the `--analyst` option to use OTP Analyst features
 
 Open a separate terminal window and run `docker-machine ip newark-otp` to get the IP address for the container
 
-Now you should be able to access it in your browser at that IP address
+Now you should be able to access it in your browser at that IP address.
+
+Jython is also added to classpath if you want to run scripts with the `--script` or
+`--enableScriptingWebService` options
 
 ## How to setup (Linux)
 Similar to the OSX instructions, but without the extra docker-machine steps at the beginning.

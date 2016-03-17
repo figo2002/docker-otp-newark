@@ -25,7 +25,6 @@ RUN \
 
 EXPOSE 8080
 EXPOSE 8081
-
-ENTRYPOINT [ "java", "-Xmx6G", "-Xverify:none", "-jar", "/var/otp/otp.jar" ]
+ENTRYPOINT [ "java", "-Xmx6G", "-Xverify:none", "-cp", "/var/otp/otp.jar:/var/otp/jython.jar", "org.opentripplanner.standalone.OTPMain" ]
 
 CMD [ "--help" ]
