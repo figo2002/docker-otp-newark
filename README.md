@@ -10,7 +10,7 @@ docker build -t newark-otp .
 ```
 
 Then, after it finishes, run
-`docker run -p 80:8080 newark-otp --autoScan --server`
+`docker run -p 80:8080 newark-otp --router newark --server`
 
 You can also run with the `--analyst` option to use OTP Analyst features
 
@@ -22,5 +22,5 @@ Now you should be able to access it in your browser at that IP address
 Similar to the OSX instructions, but without the extra docker-machine steps at the beginning.
 ```
 docker build -t newark-otp .
-docker run -p 80:8080 newark-otp --autoScan --server
+docker run -p 80:8080 newark-otp --router newark --server
 ```
