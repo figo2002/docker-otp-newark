@@ -17,6 +17,7 @@ ENV OTP_BASE /var/otp
 ENV OTP_GRAPHS /var/otp/graphs
 
 RUN \
+  mkdir -p /var/otp/scripting && \
   mkdir -p /var/otp/graphs/newark && \
   wget -O /var/otp/graphs/newark/nj-bus.zip http://transitfeeds.com/p/nj-transit/409/latest/download && \
   wget -O /var/otp/graphs/newark/nj-rail.zip http://transitfeeds.com/p/nj-transit/408/latest/download && \
